@@ -38,45 +38,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- 地图坐标处理 -->
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-geojson</artifactId>
-            <version>${geotools.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-shapefile</artifactId>
-            <version>${geotools.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-swing</artifactId>
-            <version>${geotools.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.geotools/gt-geotiff -->
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-geotiff</artifactId>
-            <version>${geotools.version}</version>
-        </dependency>
-
-        <!-- 地图数据资源-->
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-epsg-hsql</artifactId>
-            <version>${geotools.version}</version>
-        </dependency>
-
-<!--
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>2.5</version>
-        </dependency>
--->
-
     </dependencies>
 
     <repositories>
@@ -115,7 +76,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.16</version>
+                        <version>5.1.39</version>
                     </dependency>
                 </dependencies>
                 <configuration>
