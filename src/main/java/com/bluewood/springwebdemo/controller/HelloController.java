@@ -1,6 +1,7 @@
 package com.bluewood.springwebdemo.controller;
 
 import com.bluewood.springwebdemo.empty.Hello;
+import com.bluewood.springwebdemo.empty.RingsArr;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -40,5 +42,19 @@ public class HelloController {
         System.out.println(hello.getName());
         System.out.println("birthday "+hello.getBirthday());
         return hello.getBirthday().toString();
+    }
+
+    @CrossOrigin(origins = "http://127.0.0.1:8080",maxAge = 3600)
+    @PostMapping(value = "/arcgisPost")
+    public String arcgis(@RequestBody RingsArr ringsArr){
+//        System.out.println(hello.getName());
+//        System.out.println("birthday "+hello.getBirthday());
+        List<List<List<Double>>> ringsArr1 = ringsArr.getRingsArr();
+        System.out.println("ringsArr = " + ringsArr);
+        System.out.println("ringsArr11 = " + ringsArr1.get(0));
+        System.out.println("ringsArr22 = " + ringsArr1.get(0).get(0));
+        System.out.println("ringsArr33 = " + ringsArr1.get(0).get(0).get(0));
+
+        return "{\"response\":\"success\"}";
     }
 }
